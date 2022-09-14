@@ -110,7 +110,7 @@ const start = () => {
 
   const startCountdown = setInterval(() => {
 
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
 
     // finished timer
@@ -128,7 +128,8 @@ const start = () => {
 
 
       startTime = new Date().getTime();
-      countdownOverlay.innerText = ''
+      // countdownOverlay.innerText = ''
+      clearInterval(countdownOverlay);
     }
     count--;
 
